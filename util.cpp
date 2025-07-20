@@ -63,7 +63,7 @@ bool Util::canGetInStack(const std::stack<std::string>& marks, std::string str) 
 
 bool Util::countPfExpr(std::vector<std::string> postfixExpression, double& result) {
     std::stack<double> countNum; // 便于计算的栈
-    double num1, num2;
+    double num1 = 0, num2 = 0;
     for (int i = 0; i < (int)postfixExpression.size(); i++) {
         if (Util::isNumber(postfixExpression[i])) {
             // 将字符串转换为double类型的数字
